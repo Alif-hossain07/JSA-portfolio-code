@@ -1,0 +1,87 @@
+/* ============================================================
+   Marquee Component
+   ============================================================ */
+
+.marquee {
+  overflow: hidden;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: clamp(18px, 2.5vw, 28px) 0;
+  position: relative;
+  background: rgba(255, 107, 53, 0.02);
+}
+
+/* Fade edges */
+.marquee::before,
+.marquee::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marquee::before {
+  left: 0;
+  background: linear-gradient(to right, var(--navy), transparent);
+}
+
+.marquee::after {
+  right: 0;
+  background: linear-gradient(to left, var(--navy), transparent);
+}
+
+/* ---------- Track ---------- */
+.marquee-track {
+  display: flex;
+  gap: clamp(32px, 5vw, 56px);
+  animation: marquee 30s linear infinite;
+  width: max-content;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* ---------- Item ---------- */
+.marquee-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.marquee-item i {
+  font-size: clamp(1.1rem, 1rem + 0.3vw, 1.4rem);
+  color: var(--primary);
+}
+
+.marquee-item span {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(0.9rem, 0.85rem + 0.2vw, 1.05rem);
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.5px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .marquee::before,
+  .marquee::after {
+    width: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .marquee::before,
+  .marquee::after {
+    width: 24px;
+  }
+
+  .marquee-item {
+    gap: 8px;
+  }
+}

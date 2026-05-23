@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jhiltuly Sports Association | Faridpur</title>
+  <meta name="description"
+    content="Jhiltuly Sports Association (JSA) – Official portfolio. Organizing cricket, football & various sports events in Jhiltuly, Faridpur since 2025." />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!--  LOADING SCREEN  -->
+  <div class="loader" id="loader">
+    <img src="./images/JSA LOGO 2.png" alt="JSA" class="loader-logo" />
+    <div class="loader-bar">
+      <div class="loader-fill"></div>
+    </div>
+    <div class="loader-text">LOADING JSA</div>
+  </div>
+
+ 
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress" style="width:0%"></div>
+
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-brand">
+        <img src="/images/JSA LOGO 2.png" alt="JSA Logo" class="nav-logo" />
+        <span class="nav-title"><span class="highlight">JSA</span> Jhiltuly</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#sports" class="nav-link">Sports</a></li>
+        <li><a href="#events" class="nav-link">Events</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="home" class="hero">
+    <div class="hero-particles" id="particles"></div>
+    <div class="hero-content">
+      <div class="hero-badge"> Est. 2025 · Faridpur, Bangladesh</div>
+      <h1 class="hero-title">
+        Jhiltuly<br />
+        <span class="hero-title-accent">Sports Association</span>
+      </h1>
+      <p class="hero-sub">Uniting the community through cricket, football &amp; the spirit of sport. Building champions
+        on and off the field.</p>
+      <div class="hero-btns">
+        <a href="#events" class="btn btn-primary">Our Events</a>
+        <a href="#about" class="btn btn-outline">Learn More</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><span class="hstat-num" data-target="479">0</span><span class="hstat-label">Followers</span>
+        </div>
+        <div class="hstat-divider"></div>
+        <div class="hstat"><span class="hstat-num" data-target="2">0</span><span class="hstat-label">Sports</span></div>
+        <div class="hstat-divider"></div>
+        <div class="hstat"><span class="hstat-num" data-target="2025">0</span><span class="hstat-label">Founded</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-logo-wrap">
+      <div class="hero-logo-ring"></div>
+      <img src="./images/JSA LOGO 2.png" alt="JSA Logo" class="hero-logo-img" />
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!--  ABOUT  -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="section-label">Who We Are</div>
+      <h2 class="section-title">About <span class="highlight">JSA</span></h2>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p class="about-lead">Jhiltuly Sports Association (JSA) is the official sports body representing the community
+            of Jhiltuly, Faridpur.</p>
+          <p>We are dedicated to promoting sportsmanship, teamwork, and physical fitness among the youth and people of
+            all ages. By organizing local tournaments and events in cricket, football, and various other disciplines, we
+            strive to create a vibrant sports culture in our region.</p>
+          <p>Our mission is simple — to bring people together through the universal language of sport, nurture local
+            talent, and put Jhiltuly on the sporting map of Bangladesh.</p>
+          <div class="about-features">
+            <div class="feature-item">
+              <span class="feature-icon"><i class="fas fa-users"></i></span>
+              <div><strong>Community Focused</strong>
+                <p>Events designed for all ages and skill levels</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon"><i class="fas fa-seedling"></i></span>
+              <div><strong>Talent Development</strong>
+                <p>Nurturing the next generation of athletes</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon"><i class="fas fa-handshake"></i></span>
+              <div><strong>Unity &amp; Brotherhood</strong>
+                <p>Connecting families and communities</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual reveal">
+          <div class="about-card-stack">
+            <div class="acard acard-1">
+              <div class="acard-icon"><i class="fas fa-cricket"></i></div>
+              <div class="acard-text">Cricket Tournaments</div>
+            </div>
+            <div class="acard acard-2">
+              <div class="acard-icon"><i class="fas fa-football"></i></div>
+              <div class="acard-text">Football Leagues</div>
+            </div>
+            <div class="acard acard-3">
+              <div class="acard-icon"><i class="fas fa-trophy"></i></div>
+              <div class="acard-text">Championship Events</div>
+            </div>
+            <div class="about-center-logo">
+              <img src="./images/JSA LOGO 2.png" alt="JSA" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--  SPORTS  -->
+  <section id="sports" class="section sports-section">
+    <div class="container">
+      <div class="section-label">What We Play</div>
+      <h2 class="section-title">Our <span class="highlight">Sports</span></h2>
+      <div class="sports-grid">
+        <div class="sport-card reveal" id="sport-cricket">
+          <div class="sport-bg" style="background: linear-gradient(135deg,#1a3a2a,#0d2b1a)"></div>
+          <div class="sport-icon"><i class="fas fa-cricket"></i></div>
+          <h3>Cricket</h3>
+          <p>The heartbeat of JSA. We organize competitive cricket tournaments ranging from inter-village matches to
+            district-level championships, fostering the spirit of the gentleman's game.</p>
+          <ul class="sport-tags">
+            <li>T20 Format</li>
+            <li>One-Day Matches</li>
+            <li>Inter-Village</li>
+            <li>Youth Leagues</li>
+          </ul>
+          <div class="sport-hover-line"></div>
+        </div>
+        <div class="sport-card reveal" id="sport-football">
+          <div class="sport-bg" style="background: linear-gradient(135deg,#1a2a3a,#0d1b2b)"></div>
+          <div class="sport-icon"><i class="fas fa-football"></i></div>
+          <h3>Football</h3>
+          <p>Football brings electric energy to Jhiltuly. Our football programs range from friendly kickabouts to full
+            league tournaments, providing a platform for passionate players to shine.</p>
+          <ul class="sport-tags">
+            <li>Local Leagues</li>
+            <li>Knockout Cups</li>
+            <li>Youth Programs</li>
+            <li>Friendly Matches</li>
+          </ul>
+          <div class="sport-hover-line"></div>
+        </div>
+        <div class="sport-card reveal" id="sport-other">
+          <div class="sport-bg" style="background: linear-gradient(135deg,#2a1a3a,#1b0d2b)"></div>
+          <div class="sport-icon"><i class="fas fa-person-running"></i></div>
+          <h3>More Sports</h3>
+          <p>Beyond cricket and football, JSA hosts a variety of sporting events — from athletics and badminton to
+            traditional Bangladeshi games — ensuring everyone finds their passion.</p>
+          <ul class="sport-tags">
+            <li>Athletics</li>
+            <li>Badminton</li>
+            <li>Traditional Games</li>
+            <li>Annual Sports Day</li>
+          </ul>
+          <div class="sport-hover-line"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--  STATS  -->
+  <section class="stats-section">
+    <div class="stats-bg-pattern"></div>
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <div class="stat-num" data-target="479">0</div>
+          <div class="stat-label">Facebook Followers</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-num" data-target="10">0</div>
+          <div class="stat-label">Events Organized</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-num" data-target="2">0</div>
+          <div class="stat-label">Sports Disciplines</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-num" data-target="1">0</div>
+          <div class="stat-label">Year of Excellence</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--  MARQUEE  -->
+
+
+  <div class="marquee-section">
+    <div class="marquee-track" id="marqueeTrack">
+      <div class="marquee-item"><i class="fas fa-cricket"></i> Cricket</div>
+      <div class="marquee-item"><i class="fas fa-football"></i> Football</div>
+      <div class="marquee-item"><i class="fas fa-trophy"></i> Championships</div>
+      <div class="marquee-item"><i class="fas fa-bullseye"></i> Community Sports</div>
+      <div class="marquee-item"><i class="fas fa-star"></i> Youth Development</div>
+      <div class="marquee-item"><i class="fas fa-hand-fist"></i> Sportsmanship</div>
+      <div class="marquee-item"><i class="fas fa-handshake"></i> Unity</div>
+      <div class="marquee-item"><i class="fas fa-fire"></i> Passion</div>
+      <div class="marquee-item"><i class="fas fa-cricket"></i> Cricket</div>
+      <div class="marquee-item"><i class="fas fa-football"></i> Football</div>
+      <div class="marquee-item"><i class="fas fa-trophy"></i> Championships</div>
+      <div class="marquee-item"><i class="fas fa-bullseye"></i> Community Sports</div>
+      <div class="marquee-item"><i class="fas fa-star"></i> Youth Development</div>
+      <div class="marquee-item"><i class="fas fa-hand-fist"></i> Sportsmanship</div>
+      <div class="marquee-item"><i class="fas fa-handshake"></i> Unity</div>
+      <div class="marquee-item"><i class="fas fa-fire"></i> Passion</div>
+    </div>
+  </div>
+
+  <!-- EVENTS -->
+
+  <section id="events" class="section events-section">
+    <div class="container">
+      <div class="section-label">What's Happening</div>
+      <h2 class="section-title">Events &amp; <span class="highlight">Tournaments</span></h2>
+      <div class="events-tabs">
+        <button class="etab active" data-filter="all">All Events</button>
+        <button class="etab" data-filter="cricket">Cricket</button>
+        <button class="etab" data-filter="football">Football</button>
+      </div>
+      <div class="events-grid">
+        <div class="event-card reveal" data-sport="cricket">
+          <div class="event-badge">Cricket</div>
+          <div class="event-icon"><i class="fas fa-cricket"></i></div>
+          <div class="event-info">
+            <h3>Jhiltuly Premier League</h3>
+            <p>Annual T20 cricket championship — the most prestigious cricket event in Jhiltuly, attracting top talent
+              from across Faridpur district.</p>
+            <div class="event-meta">
+              <span><i class="fas fa-map-pin"></i> Jhiltuly Ground</span>
+              <span><i class="fas fa-calendar"></i> Annual</span>
+            </div>
+          </div>
+          <a href="https://www.facebook.com/JhiltulySA" target="_blank" class="event-link">View on Facebook →</a>
+        </div>
+        <div class="event-card reveal" data-sport="football">
+          <div class="event-badge" style="background:#1e4a7a">Football</div>
+          <div class="event-icon"><i class="fas fa-football"></i></div>
+          <div class="event-info">
+            <h3>JSA Football Cup</h3>
+            <p>A knockout football tournament that draws teams from surrounding villages and creates unforgettable
+              moments of community spirit and competition.</p>
+            <div class="event-meta">
+              <span><i class="fas fa-map-pin"></i> Jhiltuly Field</span>
+              <span><i class="fas fa-calendar"></i> Seasonal</span>
+            </div>
+          </div>
+          <a href="https://www.facebook.com/JhiltulySA" target="_blank" class="event-link">View on Facebook →</a>
+        </div>
+        <div class="event-card reveal" data-sport="cricket">
+          <div class="event-badge">Cricket</div>
+          <div class="event-icon"><i class="fas fa-trophy"></i></div>
+          <div class="event-info">
+            <h3>Inter-Village Cricket</h3>
+            <p>Friendly but fierce! Inter-village cricket matches that build bonds between communities and produce
+              exciting cricket action for spectators.</p>
+            <div class="event-meta">
+              <span><i class="fas fa-map-pin"></i> Multiple Venues</span>
+              <span><i class="fas fa-calendar"></i> Throughout Year</span>
+            </div>
+          </div>
+          <a href="https://www.facebook.com/JhiltulySA" target="_blank" class="event-link">View on Facebook →</a>
+        </div>
+        <div class="event-card reveal" data-sport="football">
+          <div class="event-badge" style="background:#1e4a7a">Football</div>
+          <div class="event-icon"><i class="fas fa-person-running"></i></div>
+          <div class="event-info">
+            <h3>Youth Football League</h3>
+            <p>Dedicated to developing young football talent, this league gives promising players their first taste of
+              competitive football in a nurturing environment.</p>
+            <div class="event-meta">
+              <span><i class="fas fa-map-pin"></i> Jhiltuly Field</span>
+              <span><i class="fas fa-calendar"></i> Youth Special</span>
+            </div>
+          </div>
+          <a href="https://www.facebook.com/JhiltulySA" target="_blank" class="event-link">View on Facebook →</a>
+        </div>
+        <div class="event-card reveal" data-sport="cricket">
+          <div class="event-badge">Cricket</div>
+          <div class="event-icon"><i class="fas fa-star"></i></div>
+          <div class="event-info">
+            <h3>Night Cricket Special</h3>
+            <p>Under the lights, cricket takes on a magical quality. JSA's special night cricket events are among the
+              most talked-about sporting spectacles in the area.</p>
+            <div class="event-meta">
+              <span><i class="fas fa-map-pin"></i> Main Ground</span>
+              <span><i class="fas fa-calendar"></i> Special Edition</span>
+            </div>
+          </div>
+          <a href="https://www.facebook.com/JhiltulySA" target="_blank" class="event-link">View on Facebook →</a>
+        </div>
+        <div class="event-card reveal" data-sport="football">
+          <div class="event-badge" style="background:#1e4a7a">Football</div>
+          <div class="event-icon"><i class="fas fa-bullseye"></i></div>
+          <div class="event-info">
+            <h3>Annual Sports Day</h3>
+            <p>A grand celebration featuring football, athletics, and various games — the biggest community sporting
+              event of the year in Jhiltuly.</p>
+            <div class="event-meta">
+              <span><i class="fas fa-map-pin"></i> Jhiltuly Sports Complex</span>
+              <span><i class="fas fa-calendar"></i> Annual</span>
+            </div>
+          </div>
+          <a href="https://www.facebook.com/JhiltulySA" target="_blank" class="event-link">View on Facebook →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <section id="gallery" class="section gallery-section">
+    <div class="container">
+      <div class="section-label">Moments</div>
+      <h2 class="section-title">Our <span class="highlight">Gallery</span></h2>
+      <p class="gallery-sub">Relive the best moments from our events. Follow us on Facebook for live updates and more
+        photos.</p>
+      <div class="gallery-grid">
+        <div class="gallery-item gi-large reveal">
+          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#0f3020,#1a5a35)">
+            <div class="gp-icon"><i class="fas fa-cricket"></i></div>
+            <div class="gp-text">Cricket Championship</div>
+          </div>
+          <div class="gallery-overlay"><span>Cricket Event</span></div>
+        </div>
+        <div class="gallery-item reveal">
+          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#0f2030,#1a3a5a)">
+            <div class="gp-icon"><i class="fas fa-football"></i></div>
+            <div class="gp-text">Football Match</div>
+          </div>
+          <div class="gallery-overlay"><span>Football League</span></div>
+        </div>
+        <div class="gallery-item reveal">
+          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#30200f,#5a3a1a)">
+            <div class="gp-icon"><i class="fas fa-trophy"></i></div>
+            <div class="gp-text">Trophy Ceremony</div>
+          </div>
+          <div class="gallery-overlay"><span>Awards Night</span></div>
+        </div>
+        <div class="gallery-item reveal">
+          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#200f30,#3a1a5a)">
+            <div class="gp-icon"><i class="fas fa-celebration"></i></div>
+            <div class="gp-text">Sports Day</div>
+          </div>
+          <div class="gallery-overlay"><span>Annual Sports Day</span></div>
+        </div>
+        <div class="gallery-item gi-large reveal">
+          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#0f2820,#1a4a38)">
+            <div class="gp-icon"><i class="fas fa-people-group"></i></div>
+            <div class="gp-text">Community Event</div>
+          </div>
+          <div class="gallery-overlay"><span>Community Gathering</span></div>
+        </div>
+      </div>
+      <div class="gallery-cta reveal">
+        <a href="https://www.facebook.com/JhiltulySA" target="_blank" class="btn btn-primary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+          </svg>
+          View More on Facebook
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!--  JOURNEY TIMELINE  -->
+  <section class="section" style="background:var(--navy)">
+    <div class="container">
+      <div class="section-label">Our Story</div>
+      <h2 class="section-title">The JSA <span class="highlight">Journey</span></h2>
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <div class="tl-year">2025</div>
+            <h4>JSA Founded</h4>
+            <p>Jhiltuly Sports Association was established with a vision to unite the community through sport.</p>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <div class="tl-year">2026</div>
+            <h4>First Cricket Tournament</h4>
+            <p>The inaugural Jhiltuly Premier League attracted teams from across Faridpur district.</p>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <div class="tl-year">2025</div>
+            <h4>Football League Launch</h4>
+            <p>JSA expanded into football, creating the first organized league in the area.</p>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <div class="tl-year">2025-26</div>
+            <h4>Growing Community</h4>
+            <p>With 479+ followers and counting, JSA continues to grow and inspire Jhiltuly's sports culture.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--  TESTIMONIALS  -->
+  <section class="section" style="background:var(--navy-mid)">
+    <div class="container">
+      <div class="section-label">Community Voices</div>
+      <h2 class="section-title">What People <span class="highlight">Say</span></h2>
+      <div class="testimonial-slider" id="testSlider">
+        <div class="testimonial-card">
+          <div class="test-quote">"JSA has transformed the sports scene in Jhiltuly. The tournaments are well organized
+            and bring so much excitement to our community!"</div>
+          <div class="test-author">
+            <div class="test-avatar"><i class="fas fa-cricket"></i></div>
+            <div>
+              <div class="test-name">Local Cricket Player</div>
+              <div class="test-role">Premier League Participant</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="test-quote">"Thanks to JSA, our youth now have a proper platform to showcase their football
+            skills. It's inspiring to watch them grow."</div>
+          <div class="test-author">
+            <div class="test-avatar"><i class="fas fa-football"></i></div>
+            <div>
+              <div class="test-name">Community Member</div>
+              <div class="test-role">Football Supporter</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="test-quote">"The spirit of sportsmanship that JSA promotes is remarkable. They are truly bringing
+            people together through sports."</div>
+          <div class="test-author">
+            <div class="test-avatar"><i class="fas fa-handshake"></i></div>
+            <div>
+              <div class="test-name">Sports Enthusiast</div>
+              <div class="test-role">Faridpur District</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="test-quote">"As a parent, I'm grateful for JSA's youth programs. My children are learning
+            discipline and teamwork through cricket and football."</div>
+          <div class="test-author">
+            <div class="test-avatar"><i class="fas fa-users"></i></div>
+            <div>
+              <div class="test-name">Parent</div>
+              <div class="test-role">Jhiltuly Resident</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slider-dots" id="sliderDots"></div>
+    </div>
+  </section>
+
+  <!--  LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">✕</button>
+    <div class="lightbox-inner">
+      <div class="lightbox-icon" id="lbIcon"></div>
+      <div class="lightbox-title" id="lbTitle"></div>
+      <div class="lightbox-desc" id="lbDesc"></div>
+      <a href="https://www.facebook.com/JhiltulySA" target="_blank" class="btn btn-primary">View on Facebook</a>
+    </div>
+  </div>
+
+  
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-label">Get In Touch</div>
+      <h2 class="section-title">Contact <span class="highlight">Us</span></h2>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>Join the JSA Family</h3>
+          <p>Whether you're a player, supporter, or sponsor — we'd love to have you as part of the Jhiltuly Sports
+            Association community. Reach out to us through Facebook or come visit us at our events!</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <span class="contact-icon"><i class="fas fa-map-pin"></i></span>
+              <div><strong>Location</strong>
+                <p>Jhiltuly, Faridpur, Bangladesh</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon"><i class="fas fa-calendar"></i></span>
+              <div><strong>Founded</strong>
+                <p>2025</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon"><i class="fas fa-medal"></i></span>
+              <div><strong>Sports</strong>
+                <p>Cricket, Football &amp; More</p>
+              </div>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="https://www.facebook.com/JhiltulySA" target="_blank" class="social-btn facebook">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+              Follow on Facebook
+            </a>
+          </div>
+        </div>
+        <div class="contact-form-wrap reveal">
+          <form class="contact-form" id="contactForm">
+            <h3>Send a Message</h3>
+            <div class="form-group">
+              <label for="fname">Your Name</label>
+              <input type="text" id="fname" name="name" placeholder="Enter your name" required />
+            </div>
+            <div class="form-group">
+              <label for="femail">Email Address</label>
+              <input type="email" id="femail" name="email" placeholder="Enter your email" required />
+            </div>
+            <div class="form-group">
+              <label for="fsubject">Subject</label>
+              <select id="fsubject" name="subject">
+                <option value="">Select a subject</option>
+                <option>Join as Player</option>
+                <option>Become a Sponsor</option>
+                <option>Event Inquiry</option>
+                <option>General Question</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="fmsg">Message</label>
+              <textarea id="fmsg" name="message" rows="4" placeholder="Write your message here..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Send Message <i class="fas fa-rocket"></i></button>
+            <div class="form-success" id="formSuccess">✅ Message sent! We'll get back to you soon.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!--  FOOTER  -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="./images/JSA LOGO 2.png" alt="JSA Logo" class="footer-logo" />
+          <div>
+            <div class="footer-name">Jhiltuly Sports Association</div>
+            <div class="footer-tagline">Uniting the community through sport</div>
+          </div>
+        </div>
+        <div class="footer-links-group">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#sports">Sports</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h4>Sports</h4>
+          <ul>
+            <li><a href="#sports">Cricket</a></li>
+            <li><a href="#sports">Football</a></li>
+            <li><a href="#sports">More Sports</a></li>
+            <li><a href="#events">Tournaments</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://www.facebook.com/JhiltulySA" target="_blank">Facebook Page</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#contact">Join JSA</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Jhiltuly Sports Association · Faridpur, Bangladesh · All Rights Reserved</p>
+        <p>Built with <i class="fas fa-heart"></i> for the community of Jhiltuly</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+  <!-- Theme Toggle -->
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

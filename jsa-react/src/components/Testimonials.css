@@ -1,0 +1,188 @@
+/* ============================================================
+   Testimonials Component
+   ============================================================ */
+
+/* ---------- Scroll Container ---------- */
+.testimonials-track {
+  display: flex;
+  gap: clamp(16px, 2.5vw, 24px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 8px 4px 24px;
+  -webkit-overflow-scrolling: touch;
+
+  /* Hide scrollbar */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.testimonials-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* ---------- Testimonial Card ---------- */
+.testimonial-card {
+  min-width: 340px;
+  max-width: 400px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: clamp(24px, 3vw, 32px);
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  position: relative;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 107, 53, 0.3);
+  box-shadow: 0 12px 40px var(--primary-glow);
+}
+
+/* Quote icon */
+.testimonial-card::before {
+  content: '\201C';
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  font-family: 'Poppins', serif;
+  font-size: 4rem;
+  line-height: 1;
+  color: rgba(255, 107, 53, 0.08);
+  pointer-events: none;
+}
+
+/* ---------- Stars ---------- */
+.testimonial-stars {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 16px;
+}
+
+.testimonial-stars i {
+  color: var(--accent);
+  font-size: 0.85rem;
+}
+
+/* ---------- Quote Text ---------- */
+.testimonial-text {
+  font-size: clamp(0.88rem, 0.84rem + 0.12vw, 0.98rem);
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.7;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- Author ---------- */
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.testimonial-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #fff;
+  flex-shrink: 0;
+  border: 2px solid rgba(255, 107, 53, 0.2);
+}
+
+.testimonial-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-author-info h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(0.88rem, 0.84rem + 0.1vw, 0.95rem);
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.testimonial-author-info p {
+  font-size: clamp(0.72rem, 0.68rem + 0.1vw, 0.8rem);
+  color: var(--text-muted);
+  font-style: normal;
+}
+
+/* ---------- Dots ---------- */
+.testimonials-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: clamp(20px, 3vw, 32px);
+}
+
+.testimonials-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition);
+  padding: 0;
+  min-width: 8px;
+  min-height: 8px;
+}
+
+.testimonials-dot:hover {
+  background: var(--text-muted);
+}
+
+.testimonials-dot.active {
+  width: 28px;
+  border-radius: 50px;
+  background: var(--primary);
+  box-shadow: 0 2px 10px var(--primary-glow);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .testimonial-card {
+    min-width: 300px;
+    max-width: 340px;
+  }
+}
+
+@media (max-width: 640px) {
+  .testimonial-card {
+    min-width: 280px;
+    max-width: 310px;
+    padding: 22px;
+  }
+
+  .testimonial-avatar {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-card {
+    min-width: 260px;
+    max-width: 290px;
+    padding: 20px;
+  }
+
+  .testimonial-card::before {
+    font-size: 3rem;
+  }
+}

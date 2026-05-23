@@ -1,0 +1,239 @@
+/* ============================================================
+   Navbar Component
+   ============================================================ */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  padding: 16px 0;
+  transition: all var(--transition);
+  background: transparent;
+}
+
+.navbar.scrolled {
+  background: rgba(13, 27, 42, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 0;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* ---------- Nav Container ---------- */
+.nav-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ---------- Brand ---------- */
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 10001;
+}
+
+.nav-brand img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px var(--primary-glow));
+  transition: transform var(--transition);
+}
+
+.nav-brand:hover img {
+  transform: scale(1.08) rotate(-5deg);
+}
+
+.nav-brand-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1rem, 0.9rem + 0.3vw, 1.2rem);
+  color: var(--text);
+  letter-spacing: 0.5px;
+}
+
+.nav-brand-title .highlight {
+  color: var(--primary);
+}
+
+/* ---------- Nav Links (Desktop) ---------- */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-links li a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 18px;
+  border-radius: 50px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: all var(--transition);
+  position: relative;
+  white-space: nowrap;
+  min-height: 44px;
+}
+
+.nav-links li a:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.nav-links li a.active {
+  color: var(--primary);
+  background: rgba(255, 107, 53, 0.1);
+}
+
+/* Active underline */
+.nav-links li a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18px;
+  height: 2px;
+  background: var(--primary);
+  border-radius: 100px;
+  animation: fadeIn 0.3s ease;
+}
+
+.nav-links li a i {
+  font-size: 0.75em;
+  opacity: 0.7;
+}
+
+/* ---------- Hamburger ---------- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  z-index: 10001;
+  border-radius: 12px;
+  transition: background var(--transition);
+}
+
+.hamburger:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 100px;
+  transition: all var(--transition);
+  transform-origin: center;
+}
+
+/* Hamburger open state */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ---------- Mobile Nav ---------- */
+@media (max-width: 900px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    inset: 0;
+    background: rgba(13, 27, 42, 0.97);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.96);
+    transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    z-index: 10000;
+  }
+
+  .nav-links.open {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+
+  .nav-links li a {
+    font-size: clamp(1.05rem, 1rem + 0.3vw, 1.25rem);
+    padding: 14px 32px;
+    font-weight: 600;
+  }
+
+  .nav-links li a.active::after {
+    width: 24px;
+    height: 3px;
+    bottom: 6px;
+  }
+}
+
+/* ---------- Responsive tweaks ---------- */
+@media (max-width: 1024px) {
+  .nav-links li a {
+    padding: 8px 14px;
+    font-size: 0.84rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-container {
+    padding: 0 16px;
+  }
+
+  .nav-brand img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .nav-brand-title {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 12px 0;
+  }
+
+  .navbar.scrolled {
+    padding: 8px 0;
+  }
+
+  .nav-brand-title {
+    font-size: 0.88rem;
+  }
+}

@@ -1,0 +1,226 @@
+/* ============================================================
+   About Component
+   ============================================================ */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 5vw, 64px);
+  align-items: center;
+}
+
+/* ---------- Text Side ---------- */
+.about-text {
+  position: relative;
+}
+
+.about-lead {
+  font-size: clamp(1.05rem, 0.95rem + 0.3vw, 1.2rem);
+  color: var(--text);
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.about-desc {
+  font-size: clamp(0.9rem, 0.85rem + 0.15vw, 1rem);
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-bottom: 32px;
+}
+
+/* ---------- Features ---------- */
+.about-features {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 32px;
+}
+
+.about-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.about-feature-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(255, 107, 53, 0.1);
+  border: 1px solid rgba(255, 107, 53, 0.15);
+  color: var(--primary);
+  font-size: 1.1rem;
+  transition: all var(--transition);
+}
+
+.about-feature:hover .about-feature-icon {
+  background: rgba(255, 107, 53, 0.18);
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px var(--primary-glow);
+}
+
+.about-feature-text h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(0.95rem, 0.9rem + 0.15vw, 1.05rem);
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.about-feature-text p {
+  font-size: clamp(0.82rem, 0.78rem + 0.12vw, 0.9rem);
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ---------- Card Stack ---------- */
+.about-visual {
+  position: relative;
+  min-height: 380px;
+}
+
+.about-card {
+  position: absolute;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  cursor: default;
+  max-width: 300px;
+  width: 100%;
+}
+
+.about-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  bottom: 12px;
+  width: 4px;
+  border-radius: 100px;
+}
+
+.about-card:nth-child(1) {
+  top: 0;
+  left: 10%;
+  z-index: 3;
+}
+
+.about-card:nth-child(1)::before {
+  background: var(--primary);
+}
+
+.about-card:nth-child(2) {
+  top: 130px;
+  left: 25%;
+  z-index: 2;
+}
+
+.about-card:nth-child(2)::before {
+  background: var(--accent);
+}
+
+.about-card:nth-child(3) {
+  top: 260px;
+  left: 5%;
+  z-index: 1;
+}
+
+.about-card:nth-child(3)::before {
+  background: var(--green);
+}
+
+.about-card:hover {
+  transform: scale(1.04) translateY(-4px);
+  border-color: var(--primary);
+  box-shadow: var(--shadow);
+  z-index: 10;
+}
+
+.about-card h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(0.95rem, 0.9rem + 0.12vw, 1.05rem);
+  font-weight: 600;
+  margin-bottom: 8px;
+  padding-left: 12px;
+}
+
+.about-card p {
+  font-size: clamp(0.8rem, 0.76rem + 0.1vw, 0.88rem);
+  color: var(--text-muted);
+  line-height: 1.6;
+  padding-left: 12px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .about-grid {
+    gap: 40px;
+  }
+
+  .about-card {
+    max-width: 260px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-visual {
+    min-height: 360px;
+    max-width: 400px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .about-card {
+    max-width: 280px;
+  }
+
+  .about-card:nth-child(1) { left: 5%; }
+  .about-card:nth-child(2) { left: 18%; }
+  .about-card:nth-child(3) { left: 2%; }
+}
+
+@media (max-width: 640px) {
+  .about-visual {
+    min-height: 340px;
+  }
+
+  .about-card {
+    max-width: 240px;
+    padding: 18px;
+  }
+
+  .about-feature-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-visual {
+    min-height: 320px;
+  }
+
+  .about-card {
+    max-width: 220px;
+    padding: 16px;
+  }
+
+  .about-card:nth-child(2) { left: 12%; top: 120px; }
+  .about-card:nth-child(3) { top: 240px; }
+}
