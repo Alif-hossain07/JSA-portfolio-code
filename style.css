@@ -221,17 +221,46 @@ button{cursor:pointer;font-family:inherit}
   .gallery-grid{grid-template-columns:1fr 1fr}
   .gallery-item.gi-large{grid-column:span 2}
   .hero-content{padding:100px 24px 60px}
-  .hero-logo-wrap{display:none}
+  .hero-logo-wrap{display:none !important}
   .hstat-num{font-size:1.6rem}
   .footer-top{grid-template-columns:1fr}
 }
 @media(max-width:480px){
+  .container{padding:0 16px}
   .hero-btns{flex-direction:column}
   .hero-stats{gap:0}
-  .hstat{padding:0 16px}
+  .hstat{padding:0 12px;text-align:center}
   .gallery-grid{grid-template-columns:1fr}
   .gallery-item.gi-large{grid-column:span 1}
-  .contact-form-wrap{padding:24px}
+  .contact-form-wrap{padding:20px}
+  .hero-content{padding:80px 16px 50px}
+  .hero-title{font-size:clamp(2rem,5vw,2.8rem)}
+  .section-title{font-size:clamp(1.3rem,4vw,2rem)}
+  .hstat-num{font-size:1.4rem}
+  .hstat-label{font-size:.7rem}
+  .btn{padding:10px 20px;font-size:.85rem}
+  .hero-btns .btn{width:100%}
+}
+@media(max-width:375px){
+  .container{padding:0 12px}
+  .hero-content{padding:60px 12px 40px}
+  .hero-title{font-size:1.8rem;line-height:1.1}
+  .hero-sub{font-size:.95rem}
+  .section{padding:50px 0}
+  .section-title{font-size:1.3rem;margin-bottom:24px}
+  .hero-badge{font-size:.75rem;padding:6px 16px}
+  .hstat{padding:0 8px}
+  .hstat-num{font-size:1.2rem}
+  .hstat-label{font-size:.65rem}
+  .nav-container{padding:0 12px}
+  .nav-logo{width:40px;height:40px}
+  .nav-title{font-size:.95rem}
+  .hero-scroll-indicator{bottom:20px}
+  .btn{padding:9px 18px;font-size:.8rem}
+  .event-card,.sport-card{padding:16px}
+  .gallery-placeholder{height:160px}
+  .contact-form-wrap{padding:16px}
+  .form-group input,.form-group textarea{padding:10px 12px}
 }
 
 /* ===== CUSTOM CURSOR ===== */
